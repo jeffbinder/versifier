@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic' type='text/css' media='all' />
+  <link rel="stylesheet" type="text/css" href="versifier.css"></link>
+  <script src="jquery.js"></script>
+  <script src="versifier.js"></script>
+ </head>
+ <body>
+  <div class="content">
+   <div>
+    <div class="select-label">Select a poet:</div>
+    <select id="corpus">
+     <option value="coleridge">Samuel Taylor Coleridge</option>
+     <option value="byron">Lord Byron</option>
+     <option value="shakespeare">William Shakespeare</option>
+     <option value="milton">John Milton</option>
+    </select>
+   </div>
+   <div style="clear:both">
+    <div class="select-label">Select a verse form:</div>
+    <select id="verse-form">
+     <option value="quatrain-iamb-tri">Quatrain in iambic trimeter</option>
+     <option value="couplets-iamb-pent">4 couplets in iambic pentameter</option>
+     <option value="couplets-ana-tet">4 couplets in anapestic tetrameter</option>
+     <option value="blank-verse">8 lines of blank verse</option>
+     <option value="shakes-sonnet">Shakespearean sonnet</option>
+     <option value="spens-stanza">Spenserian stanza</option>
+     <option value="ottava">Ottava rima</option>
+     <option value="custom">Custom</option>
+    </select>
+   </div>
+   <br style="clear:both" />
+   <div class="details-box">
+    <div class="details-heading">Verse form details:</div>
+    Meter: <input id="meter"></input> ×
+    <input type=number id="repetitions"></input>
+    <br/>
+    Rhyme scheme: <input id="rhyme_scheme"></input>
+   </div>
+   <button onclick="generate()">Versify</button>
+   <br/>
+   <div class="versifier-output">Your poem will appear here.</div>
+  </div>
+ </body>
+</html>
